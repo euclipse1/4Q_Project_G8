@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Page</title>
+</head>
+<body>
+    <h1>First Page</h1>
+    <form id="userSign">
+        <label for="userFN">First Name: </label>
+        <input type="text" id="userFN" name="userFN" required> <!--one-->
+        <br><br>
+        <label for="userLN">Last Name: </label>
+        <input type="text" id="userLN" name="userLN" required><!--one-->
+        <br><br>
+        <label for="userLN">Last Name: </label>
+        <input type="text" id="userLN" name="userLN" required><!--one-->
+        <br><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        document.getElementById('userForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const userInput = document.getElementById('userData').value;
+            localStorage.setItem('userInput', userInput);
+            window.location.href = 'second-page.html';
+        });
+    </script>
+</body>
+</html>
